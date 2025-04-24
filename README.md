@@ -1,4 +1,4 @@
-# Samarthanam Event Admin Dashboard
+# [Samarthanam Event Admin Dashboard](https://seva-connect-admin.vercel.app/)
 
 A comprehensive event management dashboard designed for event organizers at Samarthanam. This application enables the creation, management, and tracking of events, volunteers, and tasks in one centralized platform.
 
