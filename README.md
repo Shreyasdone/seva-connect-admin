@@ -113,4 +113,3 @@ This project is created by team Samarthanam Saarthi VIT Pune.
 ## Acknowledgements
 
 - Samarthanam Trust for the Disabled
-- All contributors and developers who have worked on this project
