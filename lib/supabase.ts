@@ -1,9 +1,15 @@
 import { createClient } from "@supabase/supabase-js"
 import type { Database } from "@/types/supabase"
 
-// Create a single supabase client for interacting with your database
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ""
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.error("[Supabase] MISSING env vars — NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY is undefined. All DB calls will fail.")
+} else {
+  const projectRef = supabaseUrl.match(/https:\/\/([^.]+)\.supabase\.co/)?.[1] ?? supabaseUrl
+  console.log(`[Supabase] Singleton client initialised → project: ${projectRef}`)
+}
 
 export const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey)
 
